@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <p class="tag">LIVE WEATHER DASHBOARD</p>
+            <h1>Weather Forecast</h1>
+            <p class="subtitle">Discover the weather conditions in your city.</p>
+        </header>
+
+        <form id="weatherForm" class="search-box">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name (e.g. Vijayawada)"
+                aria-label="City name"
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="message" role="status">Loading weather information...</p>
+
+        <section id="weatherCard" class="weather-card" hidden>
+            <div class="location">
+                <div>
+                    <p class="label">CURRENT WEATHER</p>
+                    <h2 id="cityName"></h2>
+                    <p id="localTime" class="muted"></p>
+                </div>
+                <div class="weather-icon" id="weatherIcon">🌤️</div>
+            </div>
+
+            <div class="temperature">
+                <span id="temperature">--</span><span class="degree">°C</span>
+            </div>
+
+            <p id="description" class="description"></p>
+
+            <div class="weather-details">
+                <div class="detail">
+                    <span>🌡️ Feels Like</span>
+                    <strong id="feelsLike">-- °C</strong>
+                </div>
+                <div class="detail">
+                    <span>💧 Humidity</span>
+                    <strong id="humidity">--%</strong>
+                </div>
+                <div class="detail">
+                    <span>💨 Wind Speed</span>
+                    <strong id="windSpeed">-- km/h</strong>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Weather data provided by Open-Meteo API</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
